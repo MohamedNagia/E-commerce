@@ -1,0 +1,11 @@
+
+
+  <owl-carousel-o [options]="customOptions">
+
+    @for (slide of productdata(); track slide.id) {
+      <ng-template carouselSlide [id]="slide.id">
+        <img [src]="slide.imageCover" [alt]="slide.brand" [title]="slide.title">
+      </ng-template>
+    }
+
+  </owl-carousel-o>

@@ -1,0 +1,47 @@
+
+<form [formGroup]="orderForm" (ngSubmit)="checkOrder()" >
+
+    
+ <div class="mb-4">
+      <label class="block mb-2 text-sm font-medium">Details:</label>
+      <input
+        formControlName="details"
+        type="text"
+        class="bg-blue-50 border border-blue-300 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
+        placeholder="m nagia@company.com"
+      />
+
+  
+    </div>
+ <div class="mb-4">
+      <label class="block mb-2 text-sm font-medium">Phone:</label>
+      <input
+        formControlName="phone"
+        type="text"
+        class="bg-blue-50 border border-blue-300 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
+        placeholder="m nagia@company.com"
+      />
+
+  
+    </div>
+ <div class="mb-4">
+      <label class="block mb-2 text-sm font-medium">City:</label>
+      <input
+        formControlName="city"
+        type="text"
+        class="bg-blue-50 border border-blue-300 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
+        placeholder="m nagia@company.com"
+      />
+
+  
+    </div>
+  <button
+      [disabled]="!orderForm.valid"
+      type="submit"
+      class="text-white cursor-pointer disabled:bg-blue-300 disabled:cursor-not-allowed bg-blue-700 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+    >
+      Submit @if(loading()){
+      <i class="fa-solid fa-spinner fa-spin"></i>
+      }
+    </button>
+</form>

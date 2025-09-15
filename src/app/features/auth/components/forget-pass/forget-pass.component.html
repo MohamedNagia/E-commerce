@@ -1,0 +1,27 @@
+<p>forget-pass works!</p>
+
+
+<form [formGroup]="forgetpassGroup" (ngSubmit)="forgetpass(forgetpassGroup.value)">
+
+
+       <!-- email input -->
+    <div class="mb-4">
+      <label class="block mb-2 text-3xl mb-2 font-medium">please enter your verification code:</label>
+      <input
+        formControlName="email"
+        type="email"
+        class="bg-blue-50 border border-blue-300 text-sm rounded-lg focus:border-blue-500 block w-full p-2.5"
+        placeholder="m nagia@company.com"/>
+
+ 
+    </div>
+
+      <button
+     
+      type="submit"
+      class="text-white cursor-pointer disabled:bg-blue-300 disabled:cursor-not-allowed bg-blue-700 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+    >
+      Verify 
+    </button>
+
+</form>

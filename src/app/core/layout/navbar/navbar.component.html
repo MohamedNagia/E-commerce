@@ -1,0 +1,139 @@
+<!-- <nav class="bg-white dark:bg-gray-500 fixed px-8 w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+  <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <img src="images/freshcart-logo.svg" class="h-8" alt="freshcart-logo ">
+  </a>
+  <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+      
+    <div class="flex items-center  mx-2">
+      <i class="fa-brands mx-2 fa-facebook"></i>
+      <i class="fa-brands mx-2 fa-instagram"></i>
+      <i class="fa-brands mx-2 fa-twitter"></i>
+      <i class="fa-brands mx-2 fa-twitter"></i>
+      <i class="fa-brands mx-2 fa-twitter"></i>
+   @if (login()) {
+
+    
+
+        <a routerLinkActive="active" routerLink="/register" class="block hover:text-blue-600 mx-2 cursor-pointer py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700" aria-current="page">register</a>
+        <a routerLinkActive="active" routerLink="/login" class="block mx-2 cursor-pointer py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700" aria-current="page">login</a>
+      
+   }
+@if (!login()) {
+
+          <a (click)="logout()"  class="block mx-2 cursor-pointer py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700" aria-current="page">logout</a>
+
+}    </div>
+
+      <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-200 dark:text-blue-400 dark:hover:bg-blue-700 dark:focus:ring-blue-600" aria-controls="navbar-sticky" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
+    </button>
+  </div>
+  <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+    <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
+      <li>
+        <a routerLink="/home" routerLinkActive="active" class="block cursor-pointer py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 " aria-current="page">Home</a>
+      </li>
+      <li>
+        <a  routerLinkActive="active" routerLink="/products" class="block cursor-pointer py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Products</a>
+      </li>
+      <li>
+        <a  routerLinkActive="active" routerLink="/categries" class="block cursor-pointer py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Categiores</a>
+      </li>
+      <li>
+        <a  routerLinkActive="active" routerLink="/brands m-2" class="block cursor-pointer py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Brands</a>
+      </li>
+    </ul>
+  </div>
+  </div>
+</nav> -->
+
+<nav class="bg-white px-16 border-gray-200 dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b dark:border-gray-600">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+
+    <!-- اللوجو -->
+    <a routerLink="home" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <img src="images/freshcart-logo.svg" class="h-8" alt="freshcart-logo" />
+    </a>
+
+    <!-- اليمين -->
+    <div class="flex md:order-2 items-center gap-4">
+      <!-- أيقونات السوشيال -->
+      <div class="hidden sm:flex items-center gap-3 text-gray-500 dark:text-gray-300">
+        <i class="fa-brands fa-facebook cursor-pointer hover:text-blue-600"></i>
+        <i class="fa-brands fa-instagram cursor-pointer hover:text-pink-500"></i>
+        <i class="fa-brands fa-twitter cursor-pointer hover:text-sky-500"></i>
+        <i class="fa-brands fa-youtube cursor-pointer hover:text-red-500"></i>
+        <i class="fa-brands fa-linkedin cursor-pointer hover:text-sky-500"></i>
+      </div>
+          <!-- لينكات الدخول -->
+      <div class="hidden sm:flex items-center gap-3">
+      
+     @if(!login()){
+         <a routerLink="/register"
+          class="py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 dark:text-white">Register</a>
+        <a routerLink="/login"
+          class="py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 dark:text-white">Login</a>
+
+     }
+     
+      @if (login()) {
+          <a (click)="logout()"
+          class="py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 dark:text-white cursor-pointer">Logout</a>
+
+          
+    <button class="cursor-pointer text-white p-2 rounded-full" (click)="useLanguage('en')">En</button>
+    <button class="cursor-pointer text-white p-2 rounded-full" (click)="useLanguage('ar')">العربية</button>
+      }  </div>
+
+
+      <!-- Button-->
+      <button data-collapse-toggle="navbar-sticky" type="button"
+        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-200 dark:text-gray-400 dark:hover:bg-gray-700"
+        aria-controls="navbar-sticky" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- navBar -->
+    <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+   @if(login()){
+       <ul
+        class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:border-gray-700">
+
+        <li>
+          <a routerLinkActive="active" routerLink="/home"
+            class="block hover:text-blue-600 cursor-pointer  py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 dark:text-white">{{"home"|translate}}</a>
+        </li>
+        <li>
+          <a routerLinkActive="active" routerLink="/cart"
+            class="block hover:text-blue-600 cursor-pointer  py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 dark:text-white">{{'cart'|translate}}</a>
+        </li>
+
+        <li>
+          <a routerLinkActive="active" routerLink="/products"
+            class="block hover:text-blue-600 cursor-pointer py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 dark:text-white">{{'products'|translate}}</a>
+        </li>
+
+        <li>
+          <a routerLinkActive="active" routerLink="/categories"
+            class="block hover:text-blue-600 cursor-pointer py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 dark:text-white">{{'categories'|translate}}</a>
+        </li>
+
+        <li>
+          <a routerLinkActive="active" routerLink="/brands"
+            class="block hover:text-blue-600 cursor-pointer py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 dark:text-white">{{'brands'|translate}}</a>
+        </li>
+
+      </ul>
+   }
+    </div>
+  </div>
+</nav>

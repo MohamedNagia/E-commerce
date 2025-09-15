@@ -1,0 +1,15 @@
+
+
+<div class="group grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-5 text-center hover:shadow-blue-500 transition">
+  @for (item of resultCate(); track $index) {
+    <div
+      class="max-w-sm bg-white border border-blue-200 rounded-lg shadow-sm dark:bg-white-800 dark:border-blue-700 hover:shadow-blue-500 hover:shadow-lg">
+      <a>
+        <img class="rounded-t-lg w-[100%] h-[90%]" [src]="item.image" [alt]="item.name" />
+      </a>
+      <div class=" py-2 text-3xl">
+        <p class=" font-normal text-whblueite-700 dark:text-blue-400">{{item.name}}</p>
+      </div>
+    </div>
+  }
+</div>

@@ -16,7 +16,7 @@ import { VerifyComponent } from './features/auth/components/verify/verify.compon
 
 export const routes: Routes = [
 
-{path:"",redirectTo:"home",pathMatch:"full"},
+{path:"",redirectTo:"register",pathMatch:"full"},
 {path:"register",component:RegisterComponent,title:"Register",},
 {path:"forgetpass",component:ForgetPassComponent,title:"Forgetpass",},
 {path:"verify",component:VerifyComponent,title:"Verify",},

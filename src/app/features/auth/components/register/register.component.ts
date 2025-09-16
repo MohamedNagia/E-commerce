@@ -1,3 +1,4 @@
+import { ToastrService } from 'ngx-toastr';
 import { AuthService } from './../../services/auth.service';
 
 import { Component, inject, signal } from '@angular/core';
@@ -14,7 +15,8 @@ import { Router } from '@angular/router';
   styleUrl: './register.component.scss'
 })
 export class RegisterComponent {
-private authService:AuthService=inject(AuthService)
+private authService:AuthService=inject(AuthService) 
+private toastrService:ToastrService=inject(ToastrService) 
 private router:Router=inject(Router)
 loading=signal<boolean>(false)
 errorMasseage=signal<string>("")
@@ -29,15 +31,20 @@ errorMasseage=signal<string>("")
   },this.repasswordValid)
 
   registerSubmit() {
+
+    console.log(this.registerForm.value);
+    
     if(this.registerForm.valid){
       this.loading.set(true)
 this.authService.registerAPI(this.registerForm.value).subscribe({
-
 next:(res)=>{
-console.log(res);
-if(res.mesage=="success"){
+  console.log(res);
+  if(res.message=="success"){
+    console.log(res);
+  this.loading.set(false)
 this.router.navigate(['/login'])
-this.loading.set(false)
+this.toastrService.success("success")
+
 }
 
 },

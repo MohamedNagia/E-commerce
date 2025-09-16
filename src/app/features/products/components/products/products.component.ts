@@ -1,3 +1,5 @@
+import { ToastrService } from 'ngx-toastr';
+import { CartService } from './../../../cart/services/cart.service';
 import { ProductserviceService } from './../../../home/services/productservice.service';
 import { Product } from './../../../../core/interfaces/products';
 import { Component, inject, Input, Query, signal, } from '@angular/core';
@@ -13,6 +15,8 @@ import { FormControl, ReactiveFormsModule } from '@angular/forms';
 export class ProductsComponent {
 
 private productserviceService:ProductserviceService=inject(ProductserviceService)
+private cartService:CartService=inject(CartService)
+private toastrService:ToastrService=inject(ToastrService)
   allProduct=signal<Product[]>([])
   SearchProduct=signal<Product[]>([])
 
@@ -45,21 +49,29 @@ this.allProduct.set(res.data)
 
 
 }
- 
+
+
+
 addCard(idCart:string){
 
-this.productserviceService.getDetailsProduct(idCart).subscribe({
+console.log(this.cartService,idCart);
 
-  next:(res)=>{
+this.cartService.addProductDoCart(idCart).subscribe({
+next:(res)=>{
+  console.log(res.message);
 
-  console.log(res);
+this.toastrService.success(res.message,"cart success")
+},
+error:(err)=>{
+  console.log(err);
+  this.toastrService.error(err.message,"card failed")
+  
+},
 
-
-  }
 })
+
+
+
 }
-
-
-
 
 }
